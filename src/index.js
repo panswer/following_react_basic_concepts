@@ -8,8 +8,8 @@ function NumberList(props={
   numbers:[]
 }) {
   const numbers = props.numbers
-  const listItems=numbers.map(number=>(
-    <li key={number.toString()}>
+  const listItems=numbers.map((number,index)=>(
+    <li key={index}>
       {number}
     </li>
   ));
