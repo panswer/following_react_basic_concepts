@@ -1,22 +1,9 @@
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 
-function formatName(user={
-  firstName:'',
-  lastName:''
-}) {
-  return user.firstName+' '+user.lastName;
-}
+const element=<h1>Hello, world</h1>;
 
-const user={
-  firstName:'Harper',
-  lastName:'Perez'
-};
-
-ReactDOM.render(
-  <h1>Hello, {formatName(user)}</h1>,
-  document.getElementById('root')
-);
+ReactDOM.render(element,document.getElementById('root'));
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
