@@ -1,27 +1,35 @@
 import ReactDOM from 'react-dom';
+import React from "react";
 import reportWebVitals from './reportWebVitals';
 
 // import Welcome from './components/function/Welcome';
-import Comment from './components/function/Comment';
 
-function App() {
+/* function Clock(props={
+  date:new Date()
+}) {
   return (
-    <div>
-      <Comment 
-        author={({
-          name:'Ricardo Mejias'
-        })} 
-        text='Hello, world!'
-        date={new Date()}
-      />
-    </div>
+    );
+  } */
+
+class Clock extends React.Component{
+  render(){
+    return (
+      <div className="">
+        <h1>Hello, world!</h1>
+        <h2>It's {this.props.date.toLocaleTimeString()}.</h2>
+      </div>
+    );
+  }
+}
+
+function tick() {
+  ReactDOM.render(
+    <Clock date={new Date()} />,
+    document.getElementById('root')
   );
 }
 
-ReactDOM.render( 
-    <App />,
-    document.getElementById('root')
-);
+setInterval(tick,1000);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
