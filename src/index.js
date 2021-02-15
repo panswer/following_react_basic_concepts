@@ -4,6 +4,26 @@ import reportWebVitals from './reportWebVitals';
 
 import LoginControl from "./components/class/LoginControl";
 
+// function MailBox(props={
+//   unreadMessages:[]
+// }) {
+//   const unreadMessages=props.unreadMessages;
+
+//   return (
+//     <div className="">
+//       <h1>Hello!</h1>
+//       {
+//         unreadMessages.length>0&&
+//           <h2>
+//             You have {unreadMessages.length} unread messages.
+//           </h2>
+//       }
+//     </div>
+//   );
+// }
+
+// const messages = ['React', 'Re: React', 'Re:Re: React'];
+
 function App() {
   return (
     <div>
