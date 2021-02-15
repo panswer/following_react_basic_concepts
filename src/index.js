@@ -1,18 +1,12 @@
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 
-function tick() {
-  const element=(
-    <div>
-      <h1>Hello, world!</h1>
-      <h2>It's {new Date().toLocaleTimeString()}.</h2>
-    </div>
-  );
+import Welcome from './components/function/Welcome';
 
-  ReactDOM.render(element,document.getElementById('root'));
-}
-
-setInterval(tick,1000);
+ReactDOM.render( 
+    <Welcome name = "Sara" />,
+    document.getElementById('root')
+);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
