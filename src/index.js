@@ -2,29 +2,58 @@ import ReactDOM from 'react-dom';
 import React from "react";
 import reportWebVitals from './reportWebVitals';
 
-// import Page from "./components/class/Page";
-
-function NumberList(props={
-  numbers:[]
-}) {
-  const numbers = props.numbers
-  const listItems=numbers.map((number,index)=>(
-    <li key={index}>
-      {number}
-    </li>
-  ));
-
+function Post(props) {
   return (
-    <ul>
-      {listItems}
-    </ul>
+    <li key={props.id}>
+      {props.title}
+    </li>
   );
 }
 
-const numbers=[1,2,3,4,5];
+function Blog(props={
+  posts:[]
+}) {
+  const sidebar=(
+    <ul>
+      {
+        props.posts.map(post=>(
+          <Post 
+            key={post.id}
+            id={post.id}
+            title={post.title}
+          />
+        ))
+      }
+    </ul>
+  );
+
+  const content = props.posts.map(post=>(
+    <div key={post.id}>
+      <h3>
+        {post.title}
+      </h3>
+      <p>
+        {post.content}
+      </p>
+    </div>
+  ));
+
+  return (
+    <div>
+      {sidebar}
+      <hr/>
+      {content}
+    </div>
+  );
+}
+
+const posts = [
+  {id: 1, title: 'Hello World', content: 'Welcome to learning React!'},
+  {id: 2, title: 'Installation', content: 'You can install React from npm.'}
+];
 
 ReactDOM.render(
-  <NumberList numbers={numbers}/>,
+  <Blog posts={posts}/>,
   document.getElementById('root')
 );
 
