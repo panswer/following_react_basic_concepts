@@ -2,13 +2,12 @@ import ReactDOM from 'react-dom';
 import React from "react";
 import reportWebVitals from './reportWebVitals';
 
-import Toggle from "./components/class/Toggle";
-
+import LoginControl from "./components/class/LoginControl";
 
 function App() {
   return (
     <div>
-      <Toggle/>
+      <LoginControl />
     </div>
   );
 }
