@@ -1,14 +1,19 @@
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 
-import Welcome from './components/function/Welcome';
+// import Welcome from './components/function/Welcome';
+import Comment from './components/function/Comment';
 
 function App() {
   return (
     <div>
-      <Welcome name="Sara"/>
-      <Welcome name="Cahal"/>
-      <Welcome name="Edite"/>
+      <Comment 
+        author={({
+          name:'Ricardo Mejias'
+        })} 
+        text='Hello, world!'
+        date={new Date()}
+      />
     </div>
   );
 }
