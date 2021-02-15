@@ -19,6 +19,26 @@ class Clock extends React.Component{
       date:new Date()
     };
   }
+
+  // Cuando se monte el componente
+  componentDidMount(){
+    this.timerId=setInterval(
+      ()=>this.tick(),
+      1000
+    );
+  }
+
+  // Cuando se desmonte el componente
+  componentWillUnmount(){
+    clearInterval(this.timerId);
+  }
+
+  tick(){
+    this.setState({
+      date:new Date()
+    });
+  }
+
   render(){
     return (
       <div className="">
@@ -29,14 +49,10 @@ class Clock extends React.Component{
   }
 }
 
-function tick() {
-  ReactDOM.render(
-    <Clock />,
-    document.getElementById('root')
-  );
-}
-
-setInterval(tick,1000);
+ReactDOM.render(
+  <Clock />,
+  document.getElementById('root')
+);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
