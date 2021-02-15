@@ -3,8 +3,18 @@ import reportWebVitals from './reportWebVitals';
 
 import Welcome from './components/function/Welcome';
 
+function App() {
+  return (
+    <div>
+      <Welcome name="Sara"/>
+      <Welcome name="Cahal"/>
+      <Welcome name="Edite"/>
+    </div>
+  );
+}
+
 ReactDOM.render( 
-    <Welcome name = "Sara" />,
+    <App />,
     document.getElementById('root')
 );
 
