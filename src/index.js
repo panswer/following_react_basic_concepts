@@ -2,18 +2,29 @@ import ReactDOM from 'react-dom';
 import React from "react";
 import reportWebVitals from './reportWebVitals';
 
-import Page from "./components/class/Page";
+// import Page from "./components/class/Page";
 
-function App() {
+function NumberList(props={
+  numbers:[]
+}) {
+  const numbers = props.numbers
+  const listItems=numbers.map(number=>(
+    <li key={number.toString()}>
+      {number}
+    </li>
+  ));
+
   return (
-    <div>
-      <Page />
-    </div>
+    <ul>
+      {listItems}
+    </ul>
   );
 }
 
+const numbers=[1,2,3,4,5];
+
 ReactDOM.render(
-  <App />,
+  <NumberList numbers={numbers}/>,
   document.getElementById('root')
 );
 
