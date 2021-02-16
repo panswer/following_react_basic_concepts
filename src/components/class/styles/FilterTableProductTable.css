@@ -1,0 +1,24 @@
+.FilterTableProductTable {
+    width: 200px;
+    border: 1px solid #000;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    text-align: left;
+}
+
+.p-l-0 {
+    padding-left: 0;
+}
+
+.m-l-0 {
+    margin-left: 0;
+}
+
+.stocked-true {
+    color: #000;
+}
+
+.stocked-false {
+    color: red;
+}

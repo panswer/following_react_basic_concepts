@@ -2,10 +2,10 @@ import ReactDOM from 'react-dom';
 import React from "react";
 import reportWebVitals from './reportWebVitals';
 
-import WelcomeDialog from "./components/function/WelcomeDialog";
+import FilterTableProductTable from "./components/class/FilterTableProductTable";
 
 ReactDOM.render(
-  <WelcomeDialog />,
+  <FilterTableProductTable />,
   document.getElementById('root')
 );
 
