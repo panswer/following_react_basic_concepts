@@ -2,10 +2,10 @@ import ReactDOM from 'react-dom';
 import React from "react";
 import reportWebVitals from './reportWebVitals';
 
-import FlavorForm from "./components/class/FlavorForm";
+import Reservation from "./components/class/Reservation";
 
 ReactDOM.render(
-  <FlavorForm />,
+  <Reservation />,
   document.getElementById('root')
 );
 
