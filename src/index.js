@@ -2,10 +2,10 @@ import ReactDOM from 'react-dom';
 import React from "react";
 import reportWebVitals from './reportWebVitals';
 
-import EssayForm from "./components/class/EssayForm";
+import FlavorForm from "./components/class/FlavorForm";
 
 ReactDOM.render(
-  <EssayForm />,
+  <FlavorForm />,
   document.getElementById('root')
 );
 
