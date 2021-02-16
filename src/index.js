@@ -2,10 +2,10 @@ import ReactDOM from 'react-dom';
 import React from "react";
 import reportWebVitals from './reportWebVitals';
 
-import Reservation from "./components/class/Reservation";
+import Calculator from "./components/class/Calculator";
 
 ReactDOM.render(
-  <Reservation />,
+  <Calculator />,
   document.getElementById('root')
 );
 
