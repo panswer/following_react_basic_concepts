@@ -2,10 +2,10 @@ import ReactDOM from 'react-dom';
 import React from "react";
 import reportWebVitals from './reportWebVitals';
 
-import Calculator from "./components/class/Calculator";
+import WelcomeDialog from "./components/function/WelcomeDialog";
 
 ReactDOM.render(
-  <Calculator />,
+  <WelcomeDialog />,
   document.getElementById('root')
 );
 
