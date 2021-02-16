@@ -2,10 +2,10 @@ import ReactDOM from 'react-dom';
 import React from "react";
 import reportWebVitals from './reportWebVitals';
 
-import NameForm from "./components/class/NameForm";
+import EssayForm from "./components/class/EssayForm";
 
 ReactDOM.render(
-  <NameForm />,
+  <EssayForm />,
   document.getElementById('root')
 );
 
